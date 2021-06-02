@@ -5,7 +5,7 @@
 Write Javascript code that prints out (using `console.log`) a sequence of numbers from 1 to 1000,000 (one million) without blocking the interactions with the browser. For example, while that piece of Javascript is running, mouse, keyboard events etc should work fine and browser doesn't hang.
 
 - Note that while running that code, your CPU usage may reach 100% or over
-- Be careful that you may make browser hang while testing.
+- Be careful that you may make browser hang while testing. You can quickly close the tab that's running the code to stop it
 
 Write your code in `assignment-1.js` file.
 

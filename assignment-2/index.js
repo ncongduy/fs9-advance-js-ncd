@@ -31,6 +31,18 @@ class Countries {
 			);
 		}
 	}
+
+	async findCountriesBorder(countryName) {
+		try {
+			const data = await this.searchCountry(countryName);
+			return data[0].borders;
+		} catch (error) {
+			console.log(
+				'Error when find countries it is bordering with',
+				error
+			);
+		}
+	}
 }
 
 const example = new Countries();

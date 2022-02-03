@@ -62,6 +62,29 @@ class Countries {
 			);
 		}
 	}
+
+	async searchCountryByPopulation(populationNumber) {
+		try {
+			const fetchData = await fetch('https://restcountries.com/v3.1/all');
+			const responseData = await fetchData.json();
+
+			const getListName = responseData.map((country) => ({
+				name: country.name.official,
+				population: country.population,
+			}));
+
+			const countriesList = getListName.filter(
+				(country) => country.population >= populationNumber
+			);
+
+			return countriesList;
+		} catch (error) {
+			console.log(
+				'Error when find out what countries have more people than number population',
+				error
+			);
+		}
+	}
 }
 
 const example = new Countries();

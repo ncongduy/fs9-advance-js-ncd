@@ -43,6 +43,25 @@ class Countries {
 			);
 		}
 	}
+
+	async searchCountryByLanguage(language) {
+		try {
+			const fetchData = await fetch(
+				`https://restcountries.com/v3.1/lang/${language}`
+			);
+			const responseData = await fetchData.json();
+			const listCountries = responseData.map(
+				(country) => country.name.official
+			);
+
+			return listCountries;
+		} catch (error) {
+			console.log(
+				'Error when find out what countries are speaking language',
+				error
+			);
+		}
+	}
 }
 
 const example = new Countries();

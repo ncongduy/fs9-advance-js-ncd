@@ -19,7 +19,7 @@ Write an ES6 class that does the following:
 - A method that accepts the code (2 characters) of a language, find out what countries are speaking it (the API has endpoint for this)
 - A method that accepts a population number (in millions), find out what countries have more people than that
 
-Countries APIs can be found here: [https://restcountries.eu/](https://restcountries.eu/)
+Countries APIs can be found here: [https://restcountries.eu/](https://restcountries.com/)
 
 Write your code in `assignment-2.js` file.
 Hint: You have to use a combination of fetch to get the country array, then use the array methods like `map`, `filter` to get what you want
